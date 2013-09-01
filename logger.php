@@ -1,5 +1,5 @@
 <?php
-// remember to turn off error reporting in php.ini
+// remember to turn off error reporting
 // error_reporting( E_ERROR );
 
 $current_file = 'current.csv';
@@ -133,7 +133,8 @@ if ( ($fp = fopen($current_file, 'r') or die("File does not exist...yet.") ) !==
 	echo "<tr>";
 	echo "<td>ID</td>
 	<td>Name</td>
-	<td>Login Time</td></tr>";
+	<td>Login Time</td>
+	<td></td></tr>";
     while (($data = fgetcsv($fp, $max_length, ",")) !== FALSE)
     {
     	//
