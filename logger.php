@@ -105,7 +105,7 @@ if ( isset ($_POST['action']) )
 				$logout_time = date('h:i:s d/m/y');
 				$duration = ( time() - $data[3] ) / 60; //duration logged-in in minutes
 
-				$record = array ($id, $name, $login_time, $logout_time, $duration);
+				$record = array ($id, $name, $login_time, $logout_time, (int) $duration);
 				$log_handler = fopen($log_file, 'a') or die ("Could not open file $log_file");
 				fputcsv($log_handler, $record);
 				fclose ($log_handler);
